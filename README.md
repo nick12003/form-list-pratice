@@ -1,2 +1,4 @@
 # form-list-pratice
-Created with CodeSandbox
+
+- Ant Design 樣式
+- Fomik & yup 驗證
