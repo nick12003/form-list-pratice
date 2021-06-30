@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "antd": "3.21.4",
+    "array-sort": "^1.0.0",
     "dva": "2.4.1",
     "formik": "2.2.5",
     "lodash": "4.17.11",
