@@ -87,12 +87,12 @@ export default function App() {
         </Col>
       </Row>
       {/* <Row style={{ marginBottom: "1rem" }}>
-        <Col span='6' offset='1'>
+        <Col span={6} offset={1}>
           <Input.Search enterButton='搜尋' size='large' onSearch={(value) => console.log(value)} />
         </Col>
       </Row> */}
       <Row>
-        <Col span='22' offset='1'>
+        <Col span={22} offset={1}>
           <MyTable data={data} onDelete={deleteData} onEdit={onEdit} />
         </Col>
       </Row>
