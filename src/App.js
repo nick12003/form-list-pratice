@@ -12,38 +12,6 @@ import MyForm from "./component/MyForm";
 import validationSchema from "./util/validationSchema";
 import initValues from "./util/initValues";
 
-import dva, { connect } from "dva";
-
-const app = dva();
-
-app.model({
-  namespace: "products",
-  state: [],
-  reducers: {
-    insert(preData, { data }) {
-      return [
-        {
-          key: uuidv4(),
-          createDateTime: moment().format("YYYY-MM-DD HH:mm:ss"),
-          updateDateTime: moment().format("YYYY-MM-DD HH:mm:ss"),
-          ...data,
-        },
-        ...preData,
-      ];
-    },
-    update(preData, { data }) {
-      const { key } = data;
-      return [
-        { ...data, updateDateTime: moment().format("YYYY-MM-DD HH:mm:ss") },
-        ...preData.filter((item) => item.key !== key),
-      ];
-    },
-    delete(preData, { key }) {
-      return preData.filter((item) => item.key !== key);
-    },
-  },
-});
-
 export default function App() {
   const [data, setData] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
