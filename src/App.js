@@ -80,19 +80,14 @@ export default function App() {
     });
 
   return (
-    <div style={{ paddingTop: "32px", height: "100vh" }}>
+    <div style={{ paddingTop: "32px", margin: "0 5rem", height: "100vh" }}>
       <Row>
         <Col style={{ display: "flex", justifyContent: "center" }}>
           <Typography.Title>Products</Typography.Title>
         </Col>
       </Row>
-      {/* <Row style={{ marginBottom: "1rem" }}>
-        <Col span={6} offset={1}>
-          <Input.Search enterButton='搜尋' size='large' onSearch={(value) => console.log(value)} />
-        </Col>
-      </Row> */}
       <Row>
-        <Col span={22} offset={1}>
+        <Col>
           <MyTable data={data} onDelete={deleteData} onEdit={onEdit} />
         </Col>
       </Row>
