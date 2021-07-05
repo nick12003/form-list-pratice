@@ -8,17 +8,17 @@ const MyForm = () => {
     <Form>
       <Row>
         <Col span={6} offset={1}>
-          <MyFormItem label='商品編號' name='pNo'>
+          <MyFormItem label='商品編號' className='required' name='pNo'>
             {({ field }) => <Input {...field} />}
           </MyFormItem>
         </Col>
         <Col span={6} offset={2}>
-          <MyFormItem label='商品名稱' name='pName'>
+          <MyFormItem label='商品名稱' className='required' name='pName'>
             {({ field }) => <Input {...field} />}
           </MyFormItem>
         </Col>
         <Col span={6} offset={2}>
-          <MyFormItem label='商品規格' name='pSpec'>
+          <MyFormItem label='商品規格' className='required' name='pSpec'>
             {({ field }) => <Input {...field} />}
           </MyFormItem>
         </Col>
@@ -49,7 +49,7 @@ const MyForm = () => {
       </Row>
       <Row>
         <Col span={6} offset={1}>
-          <MyFormItem label='上架時間(日期)' name='pDate'>
+          <MyFormItem label='上架時間(日期)' className='required' name='pDate'>
             {({ field }) => (
               <DatePicker
                 {...field}
@@ -62,7 +62,7 @@ const MyForm = () => {
           </MyFormItem>
         </Col>
         <Col span={6} offset={2}>
-          <MyFormItem label='上架時間(時間)' name='pTime'>
+          <MyFormItem label='上架時間(時間)' className='required' name='pTime'>
             {({ field }) => (
               <TimePicker
                 {...field}
